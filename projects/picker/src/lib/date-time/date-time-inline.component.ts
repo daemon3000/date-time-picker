@@ -250,6 +250,16 @@ export class OwlDateTimeInlineComponent<T> extends OwlDateTime<T>
         );
     }
 
+    private _showRangeLabels = true;
+    @Input()
+    get showRangeLabels(): boolean {
+        return !!this._showRangeLabels;
+    }
+    
+    set showRangeLabels(value: boolean) {
+        this._showRangeLabels = coerceBooleanProperty(value);
+    }
+
     get owlDTInlineClass(): boolean {
         return true;
     }

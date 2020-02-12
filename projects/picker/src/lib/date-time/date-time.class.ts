@@ -152,6 +152,8 @@ export abstract class OwlDateTime<T> {
 
     abstract get isInRangeMode(): boolean;
 
+    abstract get showRangeLabels(): boolean;
+
     abstract select(date: T | T[]): void;
 
     abstract yearSelected: EventEmitter<T>;

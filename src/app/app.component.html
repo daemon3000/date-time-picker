@@ -1,6 +1,10 @@
+<h1>Popup Calendar</h1>
 <label for="daterange">Datetime range (click, then press 'Set' to modify):</label>
-<input [(ngModel)]="selectedMoments" [selectMode]="'range'"
-       [owlDateTimeTrigger]="date_range_component" [owlDateTime]="date_range_component"
-       style="width: 100%; color: cornflowerblue"
-       id="daterange" matInput>
-<owl-date-time #date_range_component></owl-date-time>
+<input [(ngModel)]="selectedMoments" [selectMode]="'range'" showRangeLabels="false"
+			 [owlDateTimeTrigger]="date_range_component" [owlDateTime]="date_range_component"
+			 style="width: 100%; color: cornflowerblue"
+			 id="daterange" matInput>
+<owl-date-time pickerType="calendar" #date_range_component></owl-date-time>
+
+<h1>Inline Calendar</h1>
+<owl-date-time-inline pickerType="calendar" selectMode="range" showRangeLabels="false"></owl-date-time-inline>
