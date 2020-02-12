@@ -252,6 +252,17 @@ export class OwlDateTimeInputDirective<T>
         );
     }
 
+    /** Whether show the From - To range info at the bottom of the calendar. */
+    private _showRangeLabels = true;
+    @Input()
+    get showRangeLabels() {
+        return !!this._showRangeLabels;
+    }
+
+    set showRangeLabels(value: boolean) {
+        this._showRangeLabels = coerceBooleanProperty(value);
+    }
+
     /** The date-time-picker that this input is associated with. */
     public dtPicker: OwlDateTimeComponent<T>;
 

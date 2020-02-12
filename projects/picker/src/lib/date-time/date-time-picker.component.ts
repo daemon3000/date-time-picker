@@ -292,6 +292,10 @@ export class OwlDateTimeComponent<T> extends OwlDateTime<T>
         return this._dtInput.isInRangeMode;
     }
 
+    get showRangeLabels(): boolean {
+        return this._dtInput.showRangeLabels;
+    }
+
     private defaultScrollStrategy: () => ScrollStrategy;
 
     constructor(
